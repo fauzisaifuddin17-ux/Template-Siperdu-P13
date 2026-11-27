@@ -30,8 +30,8 @@
             <a href="{{ route('admin.buku.index') }}"
               class="sidebar-menu-link {{ request()->routeIs('admin.buku.*') ? 'active' : '' }}"
               id="menu-buku" title="Data Buku">
-                <i class="bi bi-book"></i>
-                <span>Data Buku</span>
+              <i class="bi bi-book"></i>
+              <span>Data Buku</span>
             </a>
           </li>
         </ul>
@@ -44,9 +44,10 @@
       <img src="{{ asset('assetsAdmin/images/avatar.png') }}" alt="Administrator" class="sidebar-profile-img"
         onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop'">
       <div class="sidebar-profile-info">
-        <div class="sidebar-profile-name">Administrator</div>
-        <div class="sidebar-profile-email">admin@email.com</div>
+        <div class="sidebar-profile-name">{{ Auth::user()->name }}</div>
+        <div class="sidebar-profile-email">{{ Auth::user()->email }}</div>
       </div>
+
     </div>
   </div>
   <!-- ==========================================

@@ -9,8 +9,10 @@ class DatabaseSeeder extends Seeder
     {
         // Urutan penting: kategori harus ada sebelum buku
         $this->call([
+            UserSeeder::class,
             KategoriSeeder::class,
             BukuSeeder::class,
+            
         ]);
     }
 }
